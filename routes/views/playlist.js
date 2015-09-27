@@ -8,6 +8,9 @@ exports = module.exports = function(req, res) {
 	// Set locals
 	locals.section = 'playlist';
 
+	// Load the songs
+	view.query('songs', keystone.list('Songs').model.find());
+
 	// Render the view
 	view.render('playlist');
 };

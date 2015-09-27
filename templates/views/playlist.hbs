@@ -1,9 +1,15 @@
 <div class="container">
   <h1>Наш плейлист</h1>
-  <ul>
-    <li>Песня 1</li>
-    <li>Песня 2</li>
-    <li>Песня 3</li>
-    <li>Песня 4</li>
-  </ul>
+  {{#if songs}}
+    <ul>
+      {{# each songs}}
+        <li>{{singer}} - {{name}}{{# if album}}[{{album}}]{{/if}}{{# if year}}, {{year}}{{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>
+      ... ждет появления первых песен ...
+    </p>
+  {{/if}}
 </div>
