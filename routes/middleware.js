@@ -19,7 +19,6 @@ var _ = require('underscore');
 	or replace it with your own templates / logic.
 */
 
-//TODO move navlinks management to Admin UI
 exports.initLocals = function(req, res, next) {
 
 	var locals = res.locals;

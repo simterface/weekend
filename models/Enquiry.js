@@ -7,6 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Enquiry = new keystone.List('Enquiry', {
+	label: 'Сообщения',
 	nocreate: true,
 	noedit: true
 });
