@@ -10,19 +10,19 @@
 			<div class="pull-right text-muted">{{publishedDate}}</div>
 		</h2>
 		<div class="row gallery-images">
-				{{#if heroImage}}
+				{{!-- {{#if heroImage}}
 				<div class="col-sm-4 col-md-4 gallery-image">
 					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
 				</div>
-				{{/if}}
-				<div class="col-sm-8 col-md-8">
-					<div class="row">
+				{{/if}} --}}
+				<div class="col-sm-8 col-sm-offset-2">
+					<ul class="list-unstyled">
 						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
-						</div>
+						<li class="gallery-image">
+							<img src="{{cloudinaryUrl}}" class="img-rounded">
+						</li>
 						{{/each}}
-					</div>
+					</ul>
 				</div>
 		</div>
 		{{/each}}

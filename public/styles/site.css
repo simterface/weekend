@@ -4915,4 +4915,5 @@ button.close {
 .gallery-image img {
   display: block;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  margin: 15px auto; }
