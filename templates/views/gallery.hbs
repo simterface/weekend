@@ -6,8 +6,7 @@
 	{{#if galleries}}
 		{{#each galleries}}
 		<h2>{{name}}
-			{{!-- TODO localize date --}}
-			<div class="pull-right text-muted">{{publishedDate}}</div>
+			<div class="pull-right text-muted">{{date publishedDate format='DD-MM-YYYY'}}</div>
 		</h2>
 		<div class="row gallery-images">
 				{{!-- {{#if heroImage}}
