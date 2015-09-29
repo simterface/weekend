@@ -15,6 +15,7 @@ var Songs = new keystone.List('Songs', {
   defaultColumns: 'singer, name, album'
 });
 
+// TODO: Add song file upload from admin UI
 Songs.add({
 	name: { type: Types.Text, initial: true, required: true, label: 'Название' },
 	singer: { type: Types.Text, initial: true, required: true, label: 'Исполнитель' },

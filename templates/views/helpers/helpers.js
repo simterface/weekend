@@ -7,7 +7,7 @@ module.exports = {
     return null;
   },
   headScript: function(src) {
-    // TODO: check that href is the correct link
+    // TODO: check that src is the correct link
     if(!this._headScript) this._headScript = [];
     this._headScript.push(src);
     return null;

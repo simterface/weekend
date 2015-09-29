@@ -1,9 +1,17 @@
 <div class="container">
   <h1>Наш плейлист</h1>
   {{#if songs}}
+  {{!-- TODO: embed player for songs --}}
+  {{> jplayer}}
     <ul>
       {{# each songs}}
-        <li>{{singer}} - {{name}}{{# if album}}[{{album}}]{{/if}}{{# if year}}, {{year}}{{/if}}
+        <li>{{singer}} - {{name~}}
+          {{~# if album}}
+            [{{album}}]
+          {{~/if~}}
+          {{~# if year~}}
+            , {{year}}
+          {{~/if~}}
         </li>
       {{/each}}
     </ul>
