@@ -6,7 +6,7 @@ $(document).ready(function(){
         m4a: "/audio/test.m4a",
       });
     },
-    cssSelectorAncestor: "#jp_container_1",
+    cssSelectorAncestor: "#jp_test_container",
     swfPath: "/js/jplayer",
     supplied: "m4a",
     useStateClassSkin: true,

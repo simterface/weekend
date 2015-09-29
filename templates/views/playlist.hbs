@@ -2,7 +2,10 @@
   <h1>Наш плейлист</h1>
   {{#if songs}}
   {{!-- TODO: embed player for songs --}}
-  {{> jplayer}}
+  <div class="col-sm-6 col-md-4">
+    {{> jplayer}}
+  </div>
+  <div class="col-sm-6 col-md-offset-2">
     <ul>
       {{# each songs}}
         <li>{{singer}} - {{name~}}
@@ -15,6 +18,7 @@
         </li>
       {{/each}}
     </ul>
+  </div>
   {{else}}
     <p>
       ... ждет появления первых песен ...
