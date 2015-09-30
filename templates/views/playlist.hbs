@@ -6,16 +6,17 @@
     {{> jplayer}}
   </div>
   <div class="col-sm-6 col-md-offset-2">
-    <ul>
+    <ul class="list-unstyled">
       {{# each songs}}
-        <li>{{singer}} - {{name~}}
+        <li><a href="#" class="we-playlist-play">
+          <span class="glyphicon glyphicon-play"></span> {{singer}} - {{name~}}
           {{~# if album}}
             [{{album}}]
           {{~/if~}}
           {{~# if year~}}
             , {{year}}
           {{~/if~}}
-        </li>
+        </a></li>
       {{/each}}
     </ul>
   </div>
@@ -25,3 +26,4 @@
     </p>
   {{/if}}
 </div>
+<script src="/js/playlist.js" charset="utf-8"></script>
