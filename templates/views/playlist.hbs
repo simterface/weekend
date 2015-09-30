@@ -1,29 +1,41 @@
 <div class="container">
   <h1>Наш плейлист</h1>
   {{#if songs}}
-  {{!-- TODO: embed player for songs --}}
-  <div class="col-sm-6 col-md-4">
-    {{> jplayer}}
-  </div>
-  <div class="col-sm-6 col-md-offset-2">
-    <ul class="list-unstyled">
-      {{# each songs}}
-        <li><a href="#" class="we-playlist-play">
-          <span class="glyphicon glyphicon-play"></span> {{singer}} - {{name~}}
-          {{~# if album}}
-            [{{album}}]
-          {{~/if~}}
-          {{~# if year~}}
-            , {{year}}
-          {{~/if~}}
-        </a></li>
-      {{/each}}
-    </ul>
-  </div>
+    {{!-- TODO: embed player for songs --}}
+    {{!-- @grop Player --}}
+
+    {{!-- jPlayer styles --}}
+    {{headCss "/styles/jplayer/weekend_player.css"}}
+
+    {{!-- jPlayer libs --}}
+    {{headScript "/js/jplayer/jquery.jplayer.min.js"}}
+
+    <div class="col-sm-6 col-md-4">
+      {{> jplayer}}
+    </div>
+    {{!-- @end Player --}}
+
+    {{!-- @group Playlist --}}
+    <div class="col-sm-6 col-md-offset-2">
+      <ul class="list-unstyled we-playlist-container">
+        {{# each songs}}
+          <li class="we-playlist-item"><a href="/audio/{{~file.filename~}}" class="we-play-song">
+            <span class="glyphicon glyphicon-play"></span> <span class="we-song-title">{{singer}} - {{name~}}</span>
+            {{~# if album}}
+              [{{album}}]
+            {{~/if~}}
+            {{~# if year~}}
+              , {{year}}
+            {{~/if~}}
+          </a></li>
+        {{/each}}
+      </ul>
+    </div>
+    {{!-- @end Playlist --}}
+    <script src="/js/player.js" charset="utf-8"></script>
   {{else}}
     <p>
       ... ждет появления первых песен ...
     </p>
   {{/if}}
 </div>
-<script src="/js/playlist.js" charset="utf-8"></script>

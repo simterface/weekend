@@ -15,13 +15,16 @@ var Songs = new keystone.List('Songs', {
   defaultColumns: 'singer, name, album'
 });
 
+console.log('songs model dir: ', __dirname);
+
 // TODO: Add song file upload from admin UI
 Songs.add({
 	name: { type: Types.Text, initial: true, required: true, label: 'Название' },
 	singer: { type: Types.Text, initial: true, required: true, label: 'Исполнитель' },
 	album: { type: String, label: 'Альбом' },
 	year: { type: Types.Number, default: 2015, label: 'Год' },
-  recordUrl: {type: Types.Url, label: 'Ссылка на запись'},
+// TODO: Fix dest and other options. Restict file format to jplayer acceptable formats
+  file: {type: Types.LocalFile, label: 'Файл (.m4a)', dest: './public/audio'},
   singerSite: {type: Types.Url, label: 'Сайт исполнителя'}
 });
 

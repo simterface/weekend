@@ -1,13 +1,5 @@
-{{!-- jPlayer styles --}}
-{{headCss "/styles/jplayer/weekend_player.css"}}
-
-{{!-- jPlayer libs --}}
-{{headScript "/js/jplayer/jquery.jplayer.min.js"}}
-
-{{!-- NOTE: what for that empty div ??? --}}
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-{{!--  TODO: Pass jplayer id as a parameter--}}
-<div id="jp_test_container" class="jp-audio" role="application" aria-label="media player">
+<div id="jquery_jplayer" class="jp-jplayer"></div>
+<div id="jp_container" class="jp-audio" role="application" aria-label="media player">
   <div class="jp-type-single">
     <div class="jp-gui jp-interface">
       <div class="jp-controls-holder">
@@ -33,5 +25,3 @@
     </div>
   </div>
 </div>
-
-<script src="/js/jplayer/jp_test.js"></script>
