@@ -22,10 +22,17 @@ Songs.add({
 	name: { type: Types.Text, initial: true, required: true, label: 'Название' },
 	singer: { type: Types.Text, initial: true, required: true, label: 'Исполнитель' },
 	album: { type: String, label: 'Альбом' },
-	year: { type: Types.Number, default: 2015, label: 'Год' },
-// TODO: Fix dest and other options. Restict file format to jplayer acceptable formats
-  file: {type: Types.LocalFile, label: 'Файл (.m4a)', dest: './public/audio'},
-  singerSite: {type: Types.Url, label: 'Сайт исполнителя'}
+	year: { type: Types.Number, label: 'Год' },
+  file: {
+    type: Types.LocalFile,
+    label: 'Файл (.m4a)',
+    dest: 'public/audio',
+    allowedTypes: [
+      'audio/x-m4a'
+      // 'audio/aac',
+      // 'audio/mpeg'
+    ]
+  }
 });
 
 Songs.register();
