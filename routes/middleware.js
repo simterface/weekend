@@ -24,10 +24,10 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 
 	locals.navLinks = [
-		{ label: 'Плейлист',		key: 'playlist',		href: '/playlist' },
-		{ label: 'Фото',		key: 'gallery',		href: '/gallery' },
 		{ label: 'О группе',		key: 'about',		href: '/about' },
-		{ label: 'Написать нам',		key: 'contact',		href: '/contact' }
+		{ label: 'Наше творчество',		key: 'playlist',		href: '/playlist' },
+		{ label: 'Галерея',		key: 'gallery',		href: '/gallery' },
+		{ label: 'Контакты',		key: 'contact',		href: '/contact' }
 	];
 
 	locals.user = req.user;
