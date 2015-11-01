@@ -11,3 +11,8 @@ body {
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
 }
+
+.we-demo-container iframe {
+  width: 480px;
+  height: 320px;
+}

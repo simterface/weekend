@@ -58,9 +58,9 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'Песни': 'songs',
-	'Фото': 'galleries',
-	'Сообщения': 'enquiries',
+	'Демо': 'videos',
+	'Репертуар': 'songs',
+	'Запросы': 'enquiries',
 	'Пользователи': 'users'
 });
 
