@@ -6,13 +6,81 @@ body {
 }
 
 .we-brand {
+  position: absolute;
+  left: 30px;
+  top: 30px;
   color: orange !important;
-  font-size:  36px;
+  font-size:  48px;
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
 }
 
-.we-demo-container iframe {
-  width: 480px;
-  height: 320px;
+.nav .we-brand {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  font-size: 1em;
+}
+
+
+.we-brand > small {
+  /*color: #bdbdbd;*/
+}
+
+.we-demo-container:nth-child(odd) {
+  text-align: right;
+}
+
+.we-demo-container:nth-child(even) {
+  text-align: left;
+}
+
+.we-demo-container {
+  text-align: center;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+.we-nav {
+  text-align: center;
+  /*padding: 10px 0;*/
+  font-size: 1.2em;
+}
+
+.we-nav > li {
+  /*display: inline-block;*/
+  display: table-cell;
+  /*padding: 10px;*/
+  width: 1%;
+}
+
+.nav.we-nav > li > a {
+  color: #bdbdbd;
+}
+
+.nav.we-nav > li > a:hover,
+.nav.we-nav > li > a:focus {
+  color: orange;
+  background-color: #000;
+  padding-bottom: 8px;
+  border-bottom: 2px solid orange;
+}
+
+.we-logo {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+section > h1 {
+  text-align: center;
 }

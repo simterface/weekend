@@ -5858,20 +5858,27 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-#header {
-  margin-top: 30px; }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5); }
 
-#footer {
-  margin-top: 30px;
+main {
+  padding: 45px 0; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
   border-top: 1px solid #eeeeee;
-  padding-top: 30px;
+  padding-top: 15px;
   color: #777777; }
-
-.gallery-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 15px auto; }
 
 body {
   background-color: black;

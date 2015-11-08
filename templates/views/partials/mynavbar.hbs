@@ -1,0 +1,19 @@
+<nav role="navigation">
+  <ul class="nav we-nav">
+    {{# each navLinks}}
+    <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+      <a href="{{ href }}"><span class="glyphicon {{icon}}"></span> {{ label }}</a>
+    </li>
+    {{/each}}
+  </ul>
+  <script charset="utf-8">
+    $('.we-nav a').click(function(event){
+      event.preventDefault();
+      var targetSelector = $(this).attr('href');
+      $(targetSelector).animatescroll({
+        easing: 'easeInOutCubic',
+        padding: 65
+      });
+    });
+  </script>
+</nav>

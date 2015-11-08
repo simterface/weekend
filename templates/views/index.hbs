@@ -1,14 +1,28 @@
 {{!< default}}
-<div class="container">
-	<div class="jumbotron">
-		<h1>Кавер-группа WeekEnd</h1>
-		<p>
-			Скоро здесь появится что-то очень крутое...
-		</p>
-	</div>
-	{{> demos}}
-	{{> playlist}}
-	{{> about}}
-	{{> services}}
-	{{> contact}}
+<div class="section-wrapper">
+  {{> logo}}
 </div>
+<div class="section-wrapper">
+  {{> demos}}
+</div>
+<div class="section-wrapper">
+  {{> playlist}}
+</div>
+<div class="section-wrapper">
+  {{> about}}
+</div>
+<script charset="utf-8">
+{{!-- TODO: move script to file --}}
+	// fix section-wrapper height height=viewport - header - footer
+$(document).ready(function() {
+	var resizeSections = function() {
+		var header = $('header').outerHeight();
+		var footer = $('footer').outerHeight();
+		var viewport = $(window).height();
+		var h = viewport - header - footer;
+		$('.section-wrapper').css('height', h);
+	}
+	$(window).resize(resizeSections);
+	resizeSections();
+});
+</script>

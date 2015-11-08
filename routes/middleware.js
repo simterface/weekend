@@ -23,11 +23,11 @@ exports.initLocals = function(req, res, next) {
 
 	var locals = res.locals;
 
+	// Icon bootstrap 3 class for icon
 	locals.navLinks = [
-		{ label: 'Демо',		key: 'demos',		href: '/#demos' },
-		{ label: 'Репертуар',		key: 'playlist',		href: '/#playlist' },
-		{ label: 'Бэнд',		key: 'about',		href: '/#about' },
-		{ label: 'Услуги',		key: 'services',		href: '/#services' }
+		{ label: 'Демо',		key: 'demos',		href: '#demos', icon: 'glyphicon-film' },
+		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music' },
+		{ label: 'Бэнд',		key: 'about',		href: '#about', icon: 'glyphicon-star-empty' }
 	];
 
 	locals.user = req.user;

@@ -1,0 +1,19 @@
+<section>
+  <h1 class="we-brand"><small>Кавер группа</small><br>WeekEnd</h1>
+  <img src="images/img_11.jpg" alt="" class="we-logo" />
+</section>
+{{!-- TODO: move script to file --}}
+<script charset="utf-8">
+	// fix image height=viewport - header - footer
+(function(){
+  var resizeLogo = function() {
+    var header = $('header').outerHeight();
+    var footer = $('footer').outerHeight();
+    var viewport = $(window).height();
+    var h = viewport - header - footer;
+    $('.we-logo').css('height', h);
+  }
+  $(window).resize(resizeLogo);
+  resizeLogo();
+})();
+</script>

@@ -3,7 +3,7 @@
   {{#if videos}}
     {{!-- @group Playlist --}}
     <div class="row">{{#each videos}}
-      <div class="col-xs-12 col-sm-6 text-center we-demo-container">
+      <div class="col-xs-12 col-sm-6 we-demo-container">
         {{!-- <h3>{{song}}</h3> --}}
         <iframe src="{{url}}" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -17,3 +17,21 @@
     </p>
   {{/if}}
 </section>
+{{!-- TODO move script to file --}}
+<script charset="utf-8">
+  $(document).ready(function() {
+    var section = $('#demos');
+    var sectionTop = section.offset().top;
+    var dTop = section.find('.row').offset().top;
+    var viewport = $(window).height();
+    var wTop = viewport - dTop + sectionTop;
+    var headerHeight = $('header').outerHeight();
+    var footerHeight = $('footer').outerHeight();
+    var demoHeight = Math.round((wTop - footerHeight-headerHeight)*0.5-15);
+    var demoWidth = Math.round(demoHeight*16/9);
+    $('#demos').find('iframe').css({
+      "width": demoWidth + "px",
+      "height": demoHeight + "px"
+    });
+  });
+</script>
