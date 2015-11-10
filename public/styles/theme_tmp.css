@@ -1,18 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700);
 
+/*
+  Color scheme
+  http://colorscheme.ru/#0U31Tw0w0w0w0
+*/
+
+a {
+  /*color: #846FD8;*/
+  color: #009E8E;
+}
+
+a:hover,a:focus {
+  color: #6549D8;
+}
+
+a:active {
+  color: #1C0772;
+}
+
 body {
   background-color: black;
   color: #bdbdbd;
 }
 
 .we-brand {
+  color: #FFA500 !important;
+  font-weight: bold;
+  font-family: 'Roboto Slab', serif;
+}
+
+.we-brand a {
+  color: #FFA500;
+}
+
+.we-promo .we-brand {
   position: absolute;
   left: 30px;
   top: 30px;
-  color: orange !important;
   font-size:  48px;
-  font-weight: bold;
-  font-family: 'Roboto Slab', serif;
+}
+
+.we-brand > small {
+  color: #90658E;
+}
+
+footer .we-brand {
+  font-size: 1.2em;
 }
 
 .nav .we-brand {
@@ -46,7 +79,6 @@ body {
 
 .we-nav {
   text-align: center;
-  /*padding: 10px 0;*/
   font-size: 1.2em;
 }
 
@@ -59,11 +91,12 @@ body {
 
 .nav.we-nav > li > a {
   color: #bdbdbd;
+  font-family: 'Roboto Slab', serif;
 }
 
 .nav.we-nav > li > a:hover,
 .nav.we-nav > li > a:focus {
-  color: orange;
+  color: #FFBC40;
   background-color: #000;
   padding-bottom: 8px;
   border-bottom: 2px solid orange;
@@ -81,6 +114,36 @@ body {
   overflow: hidden;
 }
 
+/*section {
+  margin: 5px auto;
+}*/
+
 section > h1 {
   text-align: center;
+  /*font-weight: lighter;*/
+  /*color: #90658E;*/
+  color: #FFA500;
+  /*color: #6549D8;*/
+  font-family: Helvetica, sans-serif;
+}
+
+.we-playlist {
+  padding: 10px;
+}
+
+.we-playlist ul {
+  list-style: none;
+}
+
+.we-playlist-item {
+  padding: 5px;
+  font-size: 1.25em;
+}
+
+.we-playlist-item .song {
+
+}
+
+.we-playlist-item .singer {
+  color: #009E8E;
 }

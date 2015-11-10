@@ -1,12 +1,19 @@
 <section id="playlist">
-  <h1>Репертуар группы</h1>
-  <div class="panel panel-default">
-    <div class="panel-body">
+  <h1 class="sr-only">Репертуар</h1>
+  {{#if songs}}
+    <div class="we-playlist">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        {{#each songs}}
+          <li class="we-playlist-item">
+            <span class="song">{{name}}</span> –
+            <span class="singer">{{singer}}</span>
+          </li>
+        {{/each}}
       </ul>
     </div>
-  </div>
+  {{else}}
+    <p>
+      Наш репертуар обновляется. Совсем скоро вы его здесь увидите.
+    </p>
+  {{/if}}
 </section>

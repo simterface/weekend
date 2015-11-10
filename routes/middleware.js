@@ -25,7 +25,8 @@ exports.initLocals = function(req, res, next) {
 
 	// Icon bootstrap 3 class for icon
 	locals.navLinks = [
-		{ label: 'Демо',		key: 'demos',		href: '#demos', icon: 'glyphicon-film' },
+		{ label: 'Видео',		key: 'demos',		href: '#demos', icon: 'glyphicon-film' },
+		{ label: 'Фото',		key: 'photo',		href: '#photos', icon: 'glyphicon-camera' },
 		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music' },
 		{ label: 'Бэнд',		key: 'about',		href: '#about', icon: 'glyphicon-star-empty' }
 	];

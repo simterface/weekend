@@ -1,16 +1,12 @@
 <section id="demos">
-  <h1>Примеры наших выступлений</h1>
+  <h1 class="sr-only">Записи наших выступлений</h1>
   {{#if videos}}
-    {{!-- @group Playlist --}}
     <div class="row">{{#each videos}}
       <div class="col-xs-12 col-sm-6 we-demo-container">
         {{!-- <h3>{{song}}</h3> --}}
         <iframe src="{{url}}" frameborder="0" allowfullscreen></iframe>
       </div>
       {{/each}}</div>
-
-    {{!-- @end Playlist --}}
-    {{!-- <script src="/js/player.js" charset="utf-8"></script> --}}
   {{else}}
     <p>
       ... ждет появления первых песен ...
