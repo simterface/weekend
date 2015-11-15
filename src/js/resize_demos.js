@@ -26,27 +26,33 @@ let setContainerSize = function(mainSize, otherSize) {
 
 module.exports = function() {
   // TODO: implement layout parameter
-  // layout: prominent (1+2), equal (3)
-  // implement prominent layout (default for large screens);
+  // layout:
+  //  - prominent (1+2) for landscape
+  //  - equal (3) for portrait
   const KH = 13.5; // layout height aspect ratio
   const KW = 16; // layout width aspect ratio
   let section = $('.we-demo');
   let sectionSize = getSectionSize(section);
   let widthUnit = Math.round(sectionSize.width/KW);
   let heightUnit = Math.round(sectionSize.height/KH);
-  let scaleByHeight = widthUnit > heightUnit;
+  let landscape = widthUnit > heightUnit;
 
   let mainContainerSize = {};
   let otherContainerSize = {};
 
-  if(scaleByHeight) {
+  if(landscape) {
+    // set landscape layout
     mainContainerSize.height = Math.round(sectionSize.height*2/3);
     mainContainerSize.width = Math.round(mainContainerSize.height* 16/9);
+    otherContainerSize.width = mainContainerSize.width/2;
+    otherContainerSize.height = mainContainerSize.height/2;
   } else {
-    mainContainerSize.width = sectionSize.width;
-    mainContainerSize.height = Math.round(mainContainerSize.width* 9/16);
+    // set portrait layout
+    mainContainerSize.height = Math.round(sectionSize.height/3);
+    mainContainerSize.width = Math.round(mainContainerSize.height* 16/9);
+    otherContainerSize.width = mainContainerSize.width;
+    otherContainerSize.height = mainContainerSize.height;
   }
-  otherContainerSize.width = mainContainerSize.width/2;
-  otherContainerSize.height = mainContainerSize.height/2;
+
   setContainerSize(mainContainerSize, otherContainerSize);
 };
