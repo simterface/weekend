@@ -1,11 +1,12 @@
 <h1 class="sr-only">Записи наших выступлений</h1>
 {{#if videos}}
-  <div class="row">{{#each videos}}
-    <div class="col-xs-12 col-sm-6 we-demo-container">
-      {{!-- <h3>{{song}}</h3> --}}
-      <iframe src="{{url}}" frameborder="0" allowfullscreen></iframe>
-    </div>
-    {{/each}}</div>
+  <div class="we-demo-wrapper">
+    {{#each videos}}
+      <div class="we-demo-container" data-song="{{song}}">
+        <iframe src="{{url}}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {{/each}}
+  </div>
 {{else}}
   <p>
     ... ждет появления первых песен ...

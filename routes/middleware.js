@@ -25,10 +25,10 @@ exports.initLocals = function(req, res, next) {
 
 	// Icon bootstrap 3 class for icon
 	locals.navLinks = [
-		{ label: 'Видео',		key: 'demos',		href: '#demos', icon: 'glyphicon-film' },
-		{ label: 'Фото',		key: 'photo',		href: '#photos', icon: 'glyphicon-camera' },
-		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music' },
-		{ label: 'Бэнд',		key: 'about',		href: '#about', icon: 'glyphicon-star-empty' }
+		{ label: 'Видео',		key: 'demos',		href: '#demos', icon: 'glyphicon-film', sectionIndex: '2' },
+		{ label: 'Фото',		key: 'photo',		href: '#photos', icon: 'glyphicon-camera', sectionIndex: '3' },
+		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music', sectionIndex: '4' },
+		{ label: 'Бэнд',		key: 'band',		href: '#band', icon: 'glyphicon-star-empty', sectionIndex: '5' }
 	];
 
 	locals.user = req.user;

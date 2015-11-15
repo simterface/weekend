@@ -32,16 +32,18 @@
 
 // DEMO SECTION
 
-.we-demo-container:nth-child(odd) {
-  text-align: right;
-}
-
-.we-demo-container:nth-child(even) {
-  text-align: left;
+.we-demo-wrapper {
+  margin: 0 auto;
 }
 
 .we-demo-container {
-  text-align: center;
+  padding: 2px;
+  float: left;
+}
+
+.we-demo-container > iframe {
+  width: 100%;
+  height: 100%;
 }
 
 

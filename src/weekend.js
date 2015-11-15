@@ -6,14 +6,16 @@ require('./lib/onepage-scroll/onepage-scroll.css');
 
 // Add modules
 var w = {}; // Window wraper for jquery plugin
-var jQuery = require("jquery");
-w.jQuery = jQuery;
+var $ = require("jquery");
+w.jQuery = $;
 // put w into window var required by plugin
 require('imports?w=>window!./lib/onepage-scroll/jquery.onepage-scroll.min.js');
 
-jQuery(document).ready(function() {
+var resizeDemos = require('./js/resize_demos.js');
+
+$(document).ready(function() {
   // enable onepage scroll plugin
-  jQuery(".main").onepage_scroll({
+  $(".main").onepage_scroll({
     sectionContainer: "section",
     easing: "ease",
     animationTime: 1000,
@@ -22,6 +24,23 @@ jQuery(document).ready(function() {
     loop: false,
     keyboard: true,
     responsiveFallback: false,
-    direction: "vertical"
+    direction: "vertical",
+    afterMove: index => {
+      // $(".we-nav li").find([`data-sectionindex="${index}"`])
+      console.log('Current section index: ', index);
+    }
   });
+
+  // add navbar click handlers
+  $(".we-nav").find('li').click(event => {
+    event.preventDefault();
+    let sectionIndex = +$(event.currentTarget).attr("data-sectionindex");
+    if (!sectionIndex || typeof sectionIndex !== 'number') {
+      console.warn(`Section index not defined`);
+    } else {
+      $(".main").moveTo(sectionIndex);
+    }
+  });
+
+  resizeDemos();
 });
