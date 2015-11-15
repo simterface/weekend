@@ -15,7 +15,6 @@ keystone.init({
 	'name': 'WeekEnd',
 	'brand': 'WeekEnd',
 
-	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',

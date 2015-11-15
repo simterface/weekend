@@ -1,0 +1,22 @@
+/*
+  Color scheme
+  http://colorscheme.ru/#0U31Tw0w0w0w0
+*/
+
+$bg-color: black;
+$brand-color: #A5fff0;
+$text-color: #bdbdbd;
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+a, a:active {
+  /*color: #846FD8;*/
+  color: #009E8E;
+}
+
+a:hover,a:focus {
+  color: #5DCFC3;
+}

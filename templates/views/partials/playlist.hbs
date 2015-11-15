@@ -1,19 +1,17 @@
-<section id="playlist">
-  <h1 class="sr-only">Репертуар</h1>
-  {{#if songs}}
-    <div class="we-playlist">
-      <ul>
-        {{#each songs}}
-          <li class="we-playlist-item">
-            <span class="song">{{name}}</span> –
-            <span class="singer">{{singer}}</span>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  {{else}}
-    <p>
-      Наш репертуар обновляется. Совсем скоро вы его здесь увидите.
-    </p>
-  {{/if}}
-</section>
+<h1 class="sr-only">Репертуар</h1>
+{{#if songs}}
+  <div class="we-playlist">
+    <ul>
+      {{#each songs}}
+        <li class="we-playlist-item">
+          <span class="song">{{name}}</span> –
+          <span class="singer">{{singer}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{else}}
+  <p>
+    Наш репертуар обновляется. Совсем скоро вы его здесь увидите.
+  </p>
+{{/if}}

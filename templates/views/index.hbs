@@ -1,31 +1,6 @@
 {{!< default}}
-<div class="section-wrapper">
-  {{> logo}}
-</div>
-<div class="section-wrapper">
-  {{> demos}}
-</div>
-<div class="section-wrapper">
-  {{> photos}}
-</div>
-<div class="section-wrapper">
-  {{> playlist}}
-</div>
-<div class="section-wrapper">
-  {{> about}}
-</div>
-<script charset="utf-8">
-{{!-- TODO: move script to file --}}
-	// fix section-wrapper height height=viewport - header - footer
-$(document).ready(function() {
-	var resizeSections = function() {
-		var header = $('header').outerHeight();
-		var footer = $('footer').outerHeight();
-		var viewport = $(window).height();
-		var h = viewport - header - footer;
-		$('.section-wrapper').css('height', h);
-	}
-	$(window).resize(resizeSections);
-	resizeSections();
-});
-</script>
+<section class="we-cover">{{> cover}}</section>
+<section class="we-demo">{{> demos}}</section>
+<section class="we-photo">{{> photos}}</section>
+<section class="we-playlist">{{> playlist}}</section>
+<section class="we-band">{{> band}}</section>

@@ -31,11 +31,34 @@ var routes = {
 	views: importRoutes('./views')
 };
 
+var isProduction = process.env.NODE_ENV === 'production';
+
 // Setup Route Bindings
 exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
+
+	// proxy to webpack-dev-server when not in production
+	// TODO: move the code into separate file
+	if(!isProduction) {
+		var httpProxy = require('http-proxy');
+		var proxy = httpProxy.createProxyServer({
+			changeOrigin: true
+		});
+
+		var bundle = require('./webpack_bundler.js');
+		bundle();
+		app.all('/build/*', function(req, res) {
+			proxy.web(req, res, {
+				target: 'http://localhost:8000'
+			});
+		});
+
+		proxy.on('error', function(e) {
+			console.log('Could not connect to webpack proxy ... ');
+		});
+	}
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

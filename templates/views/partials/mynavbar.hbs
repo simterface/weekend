@@ -6,14 +6,4 @@
     </li>
     {{/each}}
   </ul>
-  <script charset="utf-8">
-    $('.we-nav a').click(function(event){
-      event.preventDefault();
-      var targetSelector = $(this).attr('href');
-      $(targetSelector).animatescroll({
-        easing: 'easeInOutCubic',
-        padding: 65
-      });
-    });
-  </script>
 </nav>

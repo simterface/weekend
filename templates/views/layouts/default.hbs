@@ -6,51 +6,40 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>WeekEnd</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link href="/styles/site.css" rel="stylesheet">
 
-		<!--  TODO: Add temp styles to scss file-->
+		{{!-- Link vendor styles from CDN --}}
 
-		<link href="/styles/theme_tmp.css" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-		{{#each _headCss}}
-			<link href="{{this}}" rel="stylesheet">
-		{{/each}}
+		{{!-- Link custom styles --}}
+		<link href="/build/weekend.bundle.css" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
 
+
+		{{!-- LOAD Vendor JS libs --}}
 		{{!--
 			//- jQuery 1.11.1 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
 			//- you can upgrade to 2.1.3 (also bundled) for better performance.
 		--}}
-		<script src="/js/jquery/jquery-2.1.3.min.js"></script>
-		{{!--
-			//- Customise which Bootstrap javascript files are served by including
-			//- them specifically here, instead of bootstrap-3.3.4.min.js
-		--}}
-		<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		{{!-- <script src="/js/jquery/jquery-2.1.3.min.js"></script> --}}
 
-		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-		//- Safely remove this block if you are not targeting IE8 --}}
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
-		<![endif]-->
 
-		<script src="/js/animatescroll.min.js"> </script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
-		{{#each _headScript}}
-			<script src="{{this}}"></script>
-		{{/each}}
-
+		<script src="/build/weekend.bundle.js" charset="utf-8"></script>
 	</head>
 	<body>
-		<header class="container">
+		<header class="container-fluid">
 			{{> mynavbar}}
 		</header>
-		<main class="container">
+		<main class="main">
 			<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
 				validation errors, success messages, etc
@@ -83,11 +72,12 @@
 			{{{body}}}
 		</main>
 
-		<footer class="container">
-			<p class="pull-right"><a href="/keystone/" target="_blank">Админка</a></p>
-			<p class="pull-left"><a href="#">Контакты</a></p>
-			<p class="text-center we-brand"><small>кавер</small> <a href="/">WeekEnd</a> <small>группа</small></p>
-			<!-- <p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p> -->
+		<footer class="container-fluid">
+			<div class="container">
+				<div class="pull-right"><a href="/keystone/" target="_blank">Админка</a></div>
+				<div class="pull-left"><a href="#">Контакты</a></div>
+				<div class="text-center we-brand"><small>кавер</small> <a href="/">WeekEnd</a> <small>группа</small></div>
+			</div>
 		</footer>
 
 		{{{isAdminEditorJS user}}}
