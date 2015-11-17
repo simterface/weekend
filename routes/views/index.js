@@ -9,6 +9,11 @@ exports = module.exports = function(req, res) {
 	}).sort({
 		priority: 1
 	}).limit(3));
+	view.query('images', keystone.list('Images').model.find({
+		enabled: true
+	}).sort({
+		priority: 1
+	}).limit(9));
 	view.query('songs', keystone.list('Songs').model.find());
 
 	// Render the view

@@ -1,4 +1,23 @@
 <h1 class="sr-only">Стоп кадр</h1>
-<p>
-  Еще мгновение и супер фотки будут на этом самом месте...
-</p>
+{{#if images}}
+<div id="we-image-carousel" class="carousel slide we-image-container" data-interval="5000" data-ride="carousel">
+        <div class="carousel-inner">
+          {{#each images}}
+            <div class="item {{#if @first}}active{{/if}}">
+                <img src="{{url}}" alt="{{title}}">
+            </div>
+          {{/each}}
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#we-image-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#we-image-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+{{else}}
+  <p>
+    Еще мгновение и супер фотки будут на этом самом месте...
+  </p>
+{{/if}}

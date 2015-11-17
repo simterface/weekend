@@ -47,6 +47,23 @@
 }
 
 
+// PHOTOS SECTION
+.we-image-container {
+  padding: 10px 0;
+  height: inherit;
+}
+
+.we-image-container .carousel-inner,
+.we-image-container .item {
+  height: inherit;
+}
+
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+    height: 100%;
+    width: auto;
+}
+
 // PLAYLIST SECTION
 
 .we-playlist {
