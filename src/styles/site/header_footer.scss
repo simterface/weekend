@@ -22,8 +22,14 @@
   font-family: 'Roboto Slab', serif;
 }
 
-.nav.we-nav > li > a:hover,
+
 .nav.we-nav > li > a:focus {
+    background-color: #000;
+}
+
+
+.nav.we-nav > li > a:hover,
+.nav.we-nav > li.active > a {
   color: #FFBC40;
   background-color: #000;
   padding-bottom: 8px;

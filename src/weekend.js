@@ -11,6 +11,8 @@ w.jQuery = $;
 // put w into window var required by plugin
 require('imports?w=>window!./lib/onepage-scroll/jquery.onepage-scroll.min.js');
 
+var navController = require('./js/nav.js');
+
 var resizeDemos = require('./js/resize_demos.js');
 
 $(document).ready(function() {
@@ -25,9 +27,13 @@ $(document).ready(function() {
     keyboard: true,
     responsiveFallback: false,
     direction: "vertical",
+    beforeMove: index => {
+      navController.resetActive();
+    },
     afterMove: index => {
       // $(".we-nav li").find([`data-sectionindex="${index}"`])
-      console.log('Current section index: ', index);
+      navController.setActive(index);
+      console.log('Moved to section index: ', index);
     }
   });
 
