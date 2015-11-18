@@ -4,8 +4,7 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 100;
-	background-color: black;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba($bg-color,0.5);
 }
 
 .main > section {
@@ -18,10 +17,10 @@ footer {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: black;
-}
+	background-color: $bg-color;
 
-footer .container {
-	border-top: 1px solid $gray-lighter;
-	padding: 10px 15px;
+	.container {
+ 		border-top: 1px solid $border-color;
+ 		padding: 10px 15px;
+ 	}
 }

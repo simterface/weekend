@@ -5,9 +5,9 @@
 
 // Site Styles
 // ===========
+@import "site/theme_black";
 
 // Add your own site style includes here
 @import "site/layout";
 @import "site/header_footer";
-@import "site/sections.scss";
-@import "site/theme_black";
+@import "site/sections";

@@ -1,0 +1,42 @@
+// Define colors and fonts for black theme
+
+/*
+  Color scheme
+  http://colorscheme.ru/#0U31Tw0w0w0w0
+*/
+
+/*
+  Color spec:
+  Orange: #A5fff0;
+
+*/
+
+$bg-color: #000;
+$border-color: #ddd;
+
+$brand-color: #FFA500;
+$brand-smalltext-color: #90658E;
+// $link-color: #009E8E;
+$link-color: $brand-color;
+
+$text-color: #bdbdbd;
+$text-darklight-color: $brand-smalltext-color;
+// $text-darklight-color: darken(#009E8E, 10%);
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+a, a:active {
+  color: $link-color;
+}
+
+a:hover,a:focus {
+  color: lighten($link-color, 10%);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic);
+
+$brand-font-family: 'Roboto Slab', sans-serif;

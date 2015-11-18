@@ -1,0 +1,34 @@
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+.we-nav {
+  text-align: center;
+  font-size: 1.2em;
+
+  li {
+    display: table-cell;
+    width: 1%;
+
+    a {
+      color: $text-color;
+      font-family: $brand-font-family;
+
+      &:focus {
+        background-color: $bg-color;
+      }
+    }
+
+    & > a:hover,
+    &.active > a {
+        color: $brand-color;
+        background-color: $bg-color;
+        padding-bottom: 8px;
+        border-bottom: 2px solid $brand-color;
+    }
+  }
+}
+
+footer .we-brand {
+  font-size: 1.2em;
+}
