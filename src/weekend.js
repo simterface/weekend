@@ -31,14 +31,11 @@ $(document).ready(function() {
       navController.resetActive();
     },
     afterMove: index => {
-      // $(".we-nav li").find([`data-sectionindex="${index}"`])
       navController.setActive(index);
-      console.log('Moved to section index: ', index);
     }
   });
 
   // add navbar click handlers
-  // $(".we-nav").find('li').click(event => {
   $(".we-section-nav").click(event => {
     event.preventDefault();
     let sectionIndex = +$(event.currentTarget).attr("data-sectionindex");
