@@ -94,3 +94,36 @@
 }
 
 // BAND SECTION
+
+.we-musicians-container {
+  margin-top: 3%;
+  height: inherit;
+  text-align: center;
+  .items-container {
+    margin: 0 auto;
+    height: inherit;
+  }
+  .item {
+    display: inline-block;
+    height: 80%;
+    margin: 0 15px;
+    position: relative;
+    .item-overlay {
+      width: 100%;
+      padding: 10px 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba($bg-color, 0.5);
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .musician {
+    font-size: 1.2em;
+    color: $brand-color;
+  }
+}

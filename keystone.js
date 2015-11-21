@@ -60,6 +60,7 @@ keystone.set('nav', {
 	'Видео': 'videos',
 	'Фотографии': 'images',
 	'Репертуар': 'songs',
+	'Музыканты': 'musicians',
 	'Запросы': 'enquiries',
 	'Пользователи': 'users'
 });

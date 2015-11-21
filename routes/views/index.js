@@ -15,6 +15,11 @@ exports = module.exports = function(req, res) {
 		priority: 1
 	}).limit(9));
 	view.query('songs', keystone.list('Songs').model.find());
+	view.query('musicians', keystone.list('Musicians').model.find(
+		{enabled: true}
+	).sort(
+		{priority: 1}
+	));
 
 	// Render the view
 	view.render('index');
