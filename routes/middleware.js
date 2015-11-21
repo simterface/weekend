@@ -28,7 +28,7 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Видео',		key: 'demos',		href: '#demos', icon: 'glyphicon-film', sectionIndex: '2' },
 		{ label: 'Фото',		key: 'photo',		href: '#photos', icon: 'glyphicon-camera', sectionIndex: '3' },
 		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music', sectionIndex: '4' },
-		{ label: 'Бэнд',		key: 'band',		href: '#band', icon: 'glyphicon-star-empty', sectionIndex: '5' }
+		{ label: 'Музыканты',		key: 'band',		href: '#band', icon: 'glyphicon-star-empty', sectionIndex: '5' }
 	];
 
 	locals.user = req.user;

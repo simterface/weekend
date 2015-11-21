@@ -38,13 +38,20 @@ $(document).ready(function() {
   });
 
   // add navbar click handlers
-  $(".we-nav").find('li').click(event => {
+  // $(".we-nav").find('li').click(event => {
+  $(".we-section-nav").click(event => {
     event.preventDefault();
     let sectionIndex = +$(event.currentTarget).attr("data-sectionindex");
     if (!sectionIndex || typeof sectionIndex !== 'number') {
       console.warn(`Section index not defined`);
     } else {
       $(".main").moveTo(sectionIndex);
+      let footerBrand = require('./js/footer_brand.js');
+      if (sectionIndex > 1) {
+        footerBrand.show();
+      } else {
+        footerBrand.hide();
+      }
     }
   });
 
