@@ -4,7 +4,7 @@
         <div class="carousel-inner">
           {{#each images}}
             <div class="item {{#if @first}}active{{/if}}">
-                <img src="{{url}}" alt="{{title}}">
+                <img src="{{imgUrl url}}" alt="{{title}}">
             </div>
           {{/each}}
         </div>

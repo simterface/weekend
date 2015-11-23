@@ -359,7 +359,6 @@ module.exports = function() {
 			} else _helpers[key] = projectHelpers[key];
 		}
 	}
-	// _helpers.headCss = projectHelpers.headCss;
 
 	return _helpers;
 };

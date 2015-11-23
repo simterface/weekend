@@ -11,5 +11,14 @@ module.exports = {
     if(!this._headScript) this._headScript = [];
     this._headScript.push(src);
     return null;
+  },
+  imgUrl: function(url) {
+    var newUrl = url;
+    var production = process.env.NODE_ENV === 'production';
+    if (production) {
+      var prefix = process.env.CDN_IMAGES_URL || '';
+    newUrl = prefix + url;
+    }
+    return newUrl;
   }
 };
