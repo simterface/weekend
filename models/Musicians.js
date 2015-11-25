@@ -19,6 +19,7 @@ Musicians.add({
 	name: { type: Types.Text, initial: true, required: true, label: 'Имя' },
 	role: { type: Types.Text, initial: true, required: true, label: 'Роль в группе' },
   url: {type: Types.Url, label: 'Ссылка на фото'},
+  vkUrl: {type: Types.Url, label: 'Ссылка ВК'},
   priority: {type: Types.Number, default: 1, label: 'Приоритет'},
   enabled: {type: Types.Boolean, default: false, label: 'Показывать на сайте'}
 });
