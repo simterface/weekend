@@ -32,3 +32,25 @@
 footer .we-brand {
   font-size: 1.2em;
 }
+
+
+// Socials
+$icon-size: 24px;
+
+.we-social-container {
+  .icon {
+    display: inline-block;
+    visibility: middle;
+    height: $icon-size;
+    width: $icon-size;
+    background-position: 0 0;
+    &:hover {
+      background-position: -$icon-size 0;
+    }
+  }
+}
+
+.vk{
+  background: url(/icons/vk_512.png) no-repeat;
+  background-size: cover;
+}
