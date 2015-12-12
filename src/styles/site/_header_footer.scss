@@ -40,7 +40,7 @@ $icon-size: 24px;
 .we-social-container {
   .icon {
     display: inline-block;
-    visibility: middle;
+    vertical-align: middle;
     height: $icon-size;
     width: $icon-size;
     background-position: 0 0;
