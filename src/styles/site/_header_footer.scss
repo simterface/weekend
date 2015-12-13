@@ -38,19 +38,33 @@ footer .we-brand {
 $icon-size: 24px;
 
 .we-social-container {
+  .item-container {
+    display: inline-block;
+    margin: 0 0.25em;
+  }
   .icon {
+    padding: 0 5px;
     display: inline-block;
     vertical-align: middle;
     height: $icon-size;
     width: $icon-size;
     background-position: 0 0;
+    background-size: cover;
     &:hover {
-      background-position: -$icon-size 0;
+      background-position:left (-$icon-size);
     }
   }
 }
 
 .vk{
-  background: url(/icons/vk_512.png) no-repeat;
-  background-size: cover;
+  background-image: url(/icons/vkontakte-vert-512.png);
+}
+
+.mail{
+  background-image: url(/icons/mail-512.png);
+}
+
+.youtube{
+  width: 2*$icon-size !important;
+  background-image: url(/icons/youtube-inline-256.png);
 }
