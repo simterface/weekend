@@ -12,6 +12,7 @@ w.jQuery = $;
 require('imports?w=>window!./lib/onepage-scroll/jquery.onepage-scroll.min.js');
 
 var navController = require('./js/nav.js');
+var footerController = require('./js/footer.js');
 
 var resizeDemos = require('./js/resize_demos.js');
 
@@ -32,6 +33,11 @@ $(document).ready(function() {
     },
     afterMove: index => {
       navController.setActive(index);
+      if (index > 1) {
+        footerController.showBrand();
+      } else {
+        footerController.hideBrand();
+      }
     }
   });
 
@@ -43,12 +49,6 @@ $(document).ready(function() {
       console.warn(`Section index not defined`);
     } else {
       $(".main").moveTo(sectionIndex);
-      let footerBrand = require('./js/footer_brand.js');
-      if (sectionIndex > 1) {
-        footerBrand.show();
-      } else {
-        footerBrand.hide();
-      }
     }
   });
 
