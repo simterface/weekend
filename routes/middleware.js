@@ -25,8 +25,9 @@ exports.initLocals = function(req, res, next) {
 
 	// Icon bootstrap 3 class for icon
 	locals.navLinks = [
-		{ label: 'Видео',		key: 'demos',		href: '#demos', icon: 'glyphicon-film', sectionIndex: '2' },
-		{ label: 'Фото',		key: 'photo',		href: '#photos', icon: 'glyphicon-camera', sectionIndex: '3' },
+		{ label: 'О группе',		key: 'about',		href: '#about', icon: 'glyphicon-info-sign', sectionIndex: '2' },
+		{ label: 'Видео',		key: 'video',	href: '#video', icon: 'glyphicon-film', sectionIndex: '3' },
+		{ label: 'Кавер-группа Weekend', key: 'brand', href: '/', icon: '', sectionIndex: '1' },
 		{ label: 'Репертуар',		key: 'playlist',		href: '#playlist', icon: 'glyphicon-music', sectionIndex: '4' },
 		{ label: 'Музыканты',		key: 'band',		href: '#band', icon: 'glyphicon-star-empty', sectionIndex: '5' }
 	];
