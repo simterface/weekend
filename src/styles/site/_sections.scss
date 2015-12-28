@@ -3,7 +3,8 @@
 .we-demo,
 .we-photo,
 .we-playlist,
-.we-band {
+.we-band,
+.we-about {
   padding-top: 65px;
 }
 
@@ -57,17 +58,52 @@
 .we-image-container {
   padding: 10px 0;
   height: inherit;
-
-  .carousel-inner,
-  .item {
-    height: inherit;
-  }
 }
 
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-    height: 100%;
-    width: auto;
+.carousel-fade {
+    .carousel-inner {
+        height: inherit;
+        .item {
+            height: inherit;
+            transition-property: opacity;
+            transition-duration: 1s;
+            img{
+                margin: 0 auto; /* Align slide image horizontally center */
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .carousel-indicators {
+      li {
+        // border-color: $text-color;
+        // border-width: 2px;
+      }
+      .active {
+        border-color: $brand-color;
+        background-color: $brand-color;
+      }
+    }
 }
 
 // PLAYLIST SECTION
