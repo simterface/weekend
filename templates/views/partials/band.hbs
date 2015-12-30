@@ -1,11 +1,15 @@
-<h1 class="sr-only">WeekEnd в лицах</h1>
-<div class="we-musicians-container">
-  {{#each musicians}}
-    <div class="item">
-      <div class="item-overlay">
-        <a href="{{vkUrl}}" target="_blank" class="musician">{{name}}</a>
+<div class="container">
+  <h1 class="sr-only">WeekEnd в лицах</h1>
+  <div class="we-musicians-container">
+    {{#each musicians}}
+      <div class="item col-sm-6 col-md-3">
+        <div class="img-container">
+          <img src="{{imgUrl url}}" alt="{{role}} - {{Name}}" />
+          <div class="img-overlay">
+            <a href="{{vkUrl}}" target="_blank" class="musician">{{name}}</a>
+          </div>
+        </div>
       </div>
-      <img src="{{imgUrl url}}" alt="{{role}} - {{Name}}" />
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
 </div>

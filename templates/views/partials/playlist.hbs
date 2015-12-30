@@ -1,19 +1,21 @@
-<h1 class="sr-only">Репертуар</h1>
-{{#if songs}}
-  <div class="we-playlist-container">
-    <div class="row">
-      {{#each songs}}
-        <div class="col-sm-3">
-          <p class="we-playlist-item">
-            <span class="song">{{name}}</span> <br>
-            <span class="singer">{{singer}}</span>
-          </p>
-        </div>
-      {{/each}}
+<div class="container">
+  <h1 class="sr-only">Репертуар</h1>
+  {{#if songs}}
+    <div class="we-playlist-container">
+      <div class="row">
+        {{#each songs}}
+          <div class="col-sm-3">
+            <p class="we-playlist-item">
+              <span class="song">{{name}}</span> <br>
+              <span class="singer">{{singer}}</span>
+            </p>
+          </div>
+        {{/each}}
+      </div>
     </div>
-  </div>
-{{else}}
-  <p>
-    Наш репертуар обновляется. Совсем скоро вы его здесь увидите.
-  </p>
-{{/if}}
+  {{else}}
+    <p>
+      Наш репертуар обновляется. Совсем скоро вы его здесь увидите.
+    </p>
+  {{/if}}
+</div>

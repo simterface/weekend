@@ -1,28 +1,30 @@
-<h1 class="sr-only">Стоп кадр</h1>
-{{#if images}}
-<div id="we-image-carousel" class="carousel slide carousel-fade we-image-container" data-interval="4000" data-pause=false data-ride="carousel">
-        <ol class="carousel-indicators">
-          {{#each images}}
-            <li data-target="#we-image-carousel" data-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}"></li>
-          {{/each}}
-        </ol>
-        <div class="carousel-inner">
-          {{#each images}}
-            <div class="item {{#if @first}}active{{/if}}">
-                <img src="{{imgUrl url}}" alt="{{title}}">
-            </div>
-          {{/each}}
-        </div>
-        <!-- Carousel controls -->
-        <!-- <a class="carousel-control left" href="#we-image-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" href="#we-image-carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a> -->
-    </div>
-{{else}}
-  <p>
-    Еще мгновение и супер фотки будут на этом самом месте...
-  </p>
-{{/if}}
+<div class="container">
+  <h1 class="sr-only">Стоп кадр</h1>
+  {{#if images}}
+  <div id="we-image-carousel" class="carousel slide carousel-fade we-image-container" data-interval="4000" data-pause=false data-ride="carousel">
+          <ol class="carousel-indicators">
+            {{#each images}}
+              <li data-target="#we-image-carousel" data-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}"></li>
+            {{/each}}
+          </ol>
+          <div class="carousel-inner">
+            {{#each images}}
+              <div class="item {{#if @first}}active{{/if}}">
+                  <img src="{{imgUrl url}}" alt="{{title}}" class="{{imgAlignment}}">
+              </div>
+            {{/each}}
+          </div>
+          <!-- Carousel controls -->
+          <!-- <a class="carousel-control left" href="#we-image-carousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="carousel-control right" href="#we-image-carousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a> -->
+      </div>
+  {{else}}
+    <p>
+      Еще мгновение и супер фотки будут на этом самом месте...
+    </p>
+  {{/if}}
+</div>

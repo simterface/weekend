@@ -1,17 +1,19 @@
-<nav role="navigation">
-  <ul class="nav we-nav">
-    {{#each navLinks}}
-      {{#ifeq key 'brand'}}
-        <li class="we-section-nav" data-sectionindex="{{sectionIndex}}">
-          <div class="we-brand">
-            <a href="{{ href }}">WeekEnd<br><small>Кавер группа</small></a>
-          </div>
-        </li>
-      {{else}}
-        <li class="we-section-nav" data-sectionindex="{{sectionIndex}}">
-          <a href="{{ href }}"><span class="glyphicon {{icon}}"></span> {{ label }}</a>
-        </li>
-      {{/ifeq}}
-    {{/each}}
-  </ul>
-</nav>
+<div class="container">
+  <nav role="navigation">
+    <ul class="nav we-nav">
+      {{#each navLinks}}
+        {{#ifeq key 'brand'}}
+          <li class="we-section-nav" data-sectionindex="{{sectionIndex}}">
+            <div class="we-brand">
+              <a href="{{ href }}">WeekEnd<br><small>Кавер группа</small></a>
+            </div>
+          </li>
+        {{else}}
+          <li class="we-section-nav" data-sectionindex="{{sectionIndex}}">
+            <a href="{{ href }}"><span class="glyphicon {{icon}}"></span> {{ label }}</a>
+          </li>
+        {{/ifeq}}
+      {{/each}}
+    </ul>
+  </nav>
+</div>

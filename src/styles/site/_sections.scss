@@ -1,12 +1,12 @@
 // COMMON STYLES FOR SECTIONS
 
-.we-demo,
-.we-photo,
-.we-playlist,
-.we-band,
-.we-about {
-  padding-top: 65px;
-}
+// .we-demo,
+// .we-photo,
+// .we-playlist,
+// .we-band,
+// .we-about {
+//   padding-top: 65px;
+// }
 
 .we-brand {
   color: $brand-color;
@@ -39,7 +39,7 @@
 }
 
 // DEMO SECTION
-
+// TODO: remove section styles
 .we-demo-wrapper {
   margin: 0 auto;
 }
@@ -55,6 +55,11 @@
 }
 
 // PHOTOS SECTION
+.we-photo .container {
+  height: inherit;
+}
+
+
 .we-image-container {
   padding: 10px 0;
   height: inherit;
@@ -68,9 +73,9 @@
             transition-property: opacity;
             transition-duration: 1s;
             img{
-                margin: 0 auto; /* Align slide image horizontally center */
+                object-fit: contain;
+                width: 100%;
                 height: 100%;
-                width: auto;
             }
         }
 
@@ -130,32 +135,34 @@
 }
 
 // BAND SECTION
-
+.we-band  .container {
+  height: inherit;
+}
 .we-musicians-container {
-  margin-top: 3%;
+  padding: 3% 0;
   height: inherit;
   text-align: center;
-  .items-container {
-    margin: 0 auto;
-    height: inherit;
-  }
   .item {
-    display: inline-block;
-    height: 80%;
-    margin: 0 15px;
-    position: relative;
-    .item-overlay {
-      width: 100%;
-      padding: 10px 0;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      background-color: rgba($bg-color, 0.5);
-    }
+    display: table;
+    height: inherit;
+    .img-container {
+      display: table-cell;
+      vertical-align: middle;
+      // position: relative;
+      .img-overlay {
+        width: 100%;
+        position: relative;
+        padding: 0.5em 0;
+        line-height: 2em;
+        top: -3em;
+        background-color: rgba($bg-color, 0.5);
+      }
 
-    img {
-      height: 100%;
-      width: auto;
+      img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
   .musician {

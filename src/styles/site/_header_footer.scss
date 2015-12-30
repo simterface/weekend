@@ -1,3 +1,12 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: rgba($bg-color,0.5);
+}
+
 .navbar-nav.nav-justified > li{
     float:none;
 }
@@ -96,4 +105,17 @@ $icon-size: 24px;
 .youtube{
   width: 2*$icon-size !important;
   background-image: url(/icons/youtube-inline-256.png);
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $bg-color;
+
+	.container {
+ 		border-top: 1px solid $border-color;
+ 		padding: 10px 15px;
+ 	}
 }
