@@ -38,6 +38,33 @@
   overflow: hidden;
 }
 
+// ABOUT SECTION
+.we-about {
+  h2 {
+    font-size: 2em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $brand-smalltext-color;
+  }
+
+  p {
+    padding-left: 2em;
+    font-size: 1.2em;
+  }
+
+  ul {
+    li {
+      font-size: 1.4em;
+    }
+  }
+
+  .review-container {
+    p {
+      padding-left: none;
+      
+    }
+  }
+}
+
 // DEMO SECTION
 // TODO: remove section styles
 .we-demo-wrapper {
