@@ -22,20 +22,19 @@
   }
 }
 
-// LOGO SECTION
-
-.we-cover .we-brand {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  font-size:  48px;
+// COVER SECTION
+.we-cover .container {
+  height: inherit;
 }
 
-.we-cover-img {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  overflow: hidden;
+.we-cover h1 {
+  text-align: center;
+  font-weight: 300;
+  padding-top: 35%;
+}
+
+.we-cover {
+  background: url(/cover.png) center center no-repeat;
 }
 
 // ABOUT SECTION
@@ -60,7 +59,7 @@
   .review-container {
     p {
       padding-left: none;
-      
+
     }
   }
 }
