@@ -30,11 +30,22 @@
 .we-cover h1 {
   text-align: center;
   font-weight: 300;
-  padding-top: 35%;
+  padding-top: 10%;
 }
 
-.we-cover {
-  background: url(/cover.png) center center no-repeat;
+$cover-image: url(/images/img_11.jpg);
+
+.we-cover::after {
+  content: "";
+  background: $cover-image center center no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 // ABOUT SECTION
